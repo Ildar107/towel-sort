@@ -6,6 +6,7 @@ module.exports = function towelSort (matrix) {
   let stack = [];
   matrix.map((x, i) => {
     stack = stack.concat(x.sort((x,y) => i % 2 === 0 ? x - y : y - x));
+    return x;
   })
   return stack;
 }
